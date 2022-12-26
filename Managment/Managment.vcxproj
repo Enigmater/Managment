@@ -79,9 +79,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -106,9 +110,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -119,12 +127,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Bank.cpp" />
+    <ClCompile Include="BankForm.cpp" />
+    <ClCompile Include="Construction.cpp" />
+    <ClCompile Include="Credits.cpp" />
+    <ClCompile Include="CreditsForm.cpp" />
+    <ClCompile Include="FactoriesRequest.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HelpForm.cpp" />
+    <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerRequest.cpp" />
+    <ClCompile Include="PlayForm.cpp" />
+    <ClCompile Include="ProductionForm.cpp" />
+    <ClCompile Include="Settings.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="BankForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Construction.h" />
+    <ClInclude Include="Credits.h" />
+    <ClInclude Include="CreditsForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FactoriesRequest.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="HelpForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerRequest.h" />
+    <ClInclude Include="PlayForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ProductionForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Settings.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BankForm.resx">
+      <DependentUpon>BankForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreditsForm.resx">
+      <DependentUpon>CreditsForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayForm.resx">
+      <DependentUpon>PlayForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionForm.resx">
+      <DependentUpon>ProductionForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Managment.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
